@@ -1,0 +1,15 @@
+.display {
+    display: flex;
+    justify-content: center;
+}
+
+.time {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.controlPanel {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

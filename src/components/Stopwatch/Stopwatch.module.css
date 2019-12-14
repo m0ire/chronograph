@@ -1,0 +1,52 @@
+.display {
+    display: flex;
+    justify-content: center;
+}
+.time {
+    font-size: 35px;
+}
+
+.controlPanel {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.splitButton {
+    min-width: 150px;
+    font-size: 25px;
+    background: #02bef787;
+    cursor: pointer;
+}
+
+.resetButton {
+    min-width: 150px;
+    font-size: 25px;
+    background: #ea373775;
+    cursor: pointer;
+}
+
+.startButton {
+    min-width: 150px;
+    font-size: 25px;
+    background: #63f508ad;
+    cursor: pointer;
+}
+
+.splitList {
+    margin-top: 20px;
+}
+
+.splitItem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.splitTime {
+    font-size: 20px;
+}
+
+.splitRemove {
+    margin-left: 20px;
+}
