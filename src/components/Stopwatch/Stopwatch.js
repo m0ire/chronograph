@@ -14,8 +14,11 @@ const Stopwatch = ({ visible }) => {
     useEffect(() => {
         if (isStarted)
             interval = setInterval(() => {
-                setTime(prevTimer => prevTimer.clone().add(1, 's'));
-            }, 1000);
+                setTime(prevTimer => {
+                    const newTime = prevTimer.clone().add(76, 'ms');
+                    return newTime;
+                });
+            }, 76);
         else {
             clearInterval(interval);
             setTime(START_OF_DAY);
@@ -30,7 +33,7 @@ const Stopwatch = ({ visible }) => {
         <div>
             <div className={styles.display}>
                 <div className={styles.time}>
-                    {time.format('HH:mm:ss')}
+                    {time.format('HH:mm:ss:SSS')}
                 </div>
             </div>
             <div
@@ -71,7 +74,7 @@ const Stopwatch = ({ visible }) => {
                 {splitList.map(splitItem => (
                     <div className={styles.splitItem} key={splitItem.key}>
                         <div className={styles.splitTime}>
-                            {splitItem.value.format('HH:mm:ss')}
+                            {splitItem.value.format('HH:mm:ss:SSS')}
                         </div>
                         <div className={styles.splitRemove}>
                             <DeleteIcon
